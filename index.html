@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(90deg,rgb(175, 231, 234),silver);
+        }
+        .position{
+            display: inline-block;
+            font-size: 25px;
+            margin-top: 24px;
+            }
+        a{
+            text-decoration: none;
+            font-weight: 700;
+            color: rgb(221, 234, 234);
+        }
+        a:hover{
+           color: red;
+        }
+        li{
+            list-style-type: none;
+            display: inline-block; 
+            border: 5px solid rgb(19, 186, 220);
+            background-color: rgb(5, 6, 6);
+            padding: 5px;
+            margin-left: 60px;
+            border-radius: 5px;
+             }
+        ul{
+            margin-left: 1000px;
+            margin-top: -45px;
+           
+        } 
+        #textarea{
+            border: 0.4rem solid #eb3e13;
+            border-radius: 1rem;
+            max-width: 50rem;
+            width: 50rem;
+            height: 10rem;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            margin-left: 15rem;
+            margin-top: 7rem;
+        }
+        #btn:hover{
+            color: rgb(9, 2, 2);
+        }
+        #btn{
+            display: inline-block;
+            padding: 1rem 2.4rem;
+            border: none;
+            border-radius: 1rem;
+            background-color: #479aa0;
+            color: #fff;
+            font-size: 1.8rem;
+            margin-top: 1.6rem;
+            margin-left: 40rem;
+        }
+        #title{
+            font-style: 2.4rem;
+            text-transform: capitalize;
+            color: #190f0a;
+            text-align: center   ;
+        }
+        #showSentence, #score{
+            font-size: 1.6rem;
+            margin: 2rem 0;
+            letter-spacing: .02rem;
+            text-align: center;
+        }
+        .yoho{
+            width: 50px;
+            aspect-ratio: 1;
+            background-color: #eb3e13;
+            border-radius: 50%;
+            animation-name: yoh;
+        animation-duration: 3s;
+        /* use animation in the container where you want to use the animation*/
+        animation-timing-function: linear;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+       
+        @keyframes yoh{
+            from{
+                translate: 300px;
+            }
+            to{
+                translate: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="main-body">
+        
+    <h2 class="position">Typingpathshala</h2>
+    <ul>
+        <li><a href="sign in.html">Sign in</a></li>
+        <li><a href="signup.html"> Sign up</a></li>
+    </ul>
+    <h2 id="title">typing speed test</h2>
+    <div class="yoho">
+
+    </div>
+    <p id="showSentence"></p>
+    <div class="typing_section">
+        <label for="textarea"></label>
+        <textarea name="textarea" id="textarea" cols="30" rows="5" disabled></textarea>
+        <br>
+        <button id="btn" type="button">Start</button>
+    </div>
+    <p id="score"></p>
+    </section>
+      <script src="script.js"></script>
+</body>
+</html>

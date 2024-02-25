@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            display: block;
+            width: 400px;
+            height: 90vh;
+            background-color: aliceblue;
+            position: relative;
+            left: 500px;
+            top: 40px;
+            display: flex;
+            /* it is important to give flex. and it works in parent only*/
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* only display doesn't work but it work with width and height */
+        }
+        .teal{
+            margin: 10px;
+            width: 300px;
+            height: 30px;
+        }
+        h3{
+            font-weight: 50px;
+        }
+        .teals{
+            margin: 10px;
+            width: 200px;
+            height: 30px;
+            background-color: aqua;
+            border-radius: 5px;
+        }
+        .logo{
+            width: 100px;
+        }
+        .uname{
+            color: rgb(224, 77, 77);
+        }
+    </style>
+</head>
+<body>
+    <form id="signupForm" onsubmit="return username()" onsubmit="return state">
+        <div class="form">
+            <img src="logos.png" class="logo">
+            <h3>Typingpathshala</h3>
+            <input id="ganpat" type="text" placeholder="Username" class="teal">
+            <input type="password" placeholder="Password"   id="passwords" class="teal">
+            <input type="password" placeholder="Confirm password" class="teal" id="confirmpassword">
+            <input type="email" placeholder="E-mail address" class="teal">
+            <input type="submit" class="teals" value="submit">
+        </div>
+        <select id="states">
+            <option value="" selected="selected"> SELECT A STATE</option>
+            <option value="AL">Alabama</option> 
+            <option value="AK">Alaska</option> 
+            <option value="AZ">Arizona</option> 
+            <option value="AR">Arkansas</option>
+            </select>
+    </form>
+</body>
+<script>
+   function username(){
+    if(document.getElementById('ganpat').value.length === 0){
+        alert("Please enter your username");
+    }
+   }
+    function state(){
+        if(document.getElementById('states').selectedIndex === 0){
+            alert('please select the states');
+        }
+    }
+</script>
+</html>
